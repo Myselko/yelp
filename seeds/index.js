@@ -15,17 +15,19 @@ db.once('open', () => {
   console.log('DB yelp-camp connected');
 });
 
-const sample = array => { array[Math.floor(Math.random() * array.length)] }
+const sample = (array) =>  array[Math.floor(Math.random() * array.length)];
 
 const seedDB = async () => {
   await Campground.deleteMany({});
-  for (let i = 0; i < 50; i++){
+  for (let i = 0; i < 5; i++){
     let random1000 = Math.floor(Math.random() * 1000);
     let randomPlaces = Math.floor(Math.random() * 21);
     let randomDescriptors = Math.floor(Math.random() * 18);
     const camp = new Campground({
-      title: `${descriptors[randomDescriptors]} ${places[randomPlaces]}`,
-      location: `${sample(descriptors)}, ${sample(places)}`,
+      title: `ggnore`,
+      location: `${cities[random1000].city}, ${cities[random1000].state}`, 
+      // title: `${descriptors[randomDescriptors]} ${places[randomPlaces]}`,
+      
     })
     await camp.save();
   }
