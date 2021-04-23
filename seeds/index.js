@@ -24,7 +24,7 @@ const seedDB = async () => {
     let randomPlaces = Math.floor(Math.random() * 21);
     let randomDescriptors = Math.floor(Math.random() * 18);
     const camp = new Campground({
-      title: `ggnore`,
+      title: `${sample(descriptors)} ${sample(places)}`,
       location: `${cities[random1000].city}, ${cities[random1000].state}`, 
       // title: `${descriptors[randomDescriptors]} ${places[randomPlaces]}`,
       
