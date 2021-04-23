@@ -19,7 +19,7 @@ const sample = (array) =>  array[Math.floor(Math.random() * array.length)];
 
 const seedDB = async () => {
   await Campground.deleteMany({});
-  for (let i = 0; i < 5; i++){
+  for (let i = 0; i < 50; i++){
     let random1000 = Math.floor(Math.random() * 1000);
     let randomPlaces = Math.floor(Math.random() * 21);
     let randomDescriptors = Math.floor(Math.random() * 18);
